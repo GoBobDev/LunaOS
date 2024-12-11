@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="generator" content="Astro v5.0.0-beta.10">
+  <title>LunaOS - Оптимизированная модификация Windows для энтузиастов.</title>
+  <meta name="description" content="Мы разработали LunaOS для энтузиастов и игроков, улучшая конфиденциальность, удобство и производительность. Получите лучший опыт по сравнению с стоковым, медленным Windows.">
+  <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#1a91ff">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LunaOS">
+  <meta property="og:title" content="Оптимизированная модификация Windows, предназначенная для энтузиастов.">
+  <meta property="og:description" content="Мы разработали LunaOS для энтузиастов и игроков, улучшая конфиденциальность, удобство и производительность.">
+  <meta property="og:image" content="path/to/defaultimg.png">
+  <meta property="og:image:alt" content="Предпросмотр страницы LunaOS">
+  <meta property="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Segoe UI Semibold', sans-serif;
+      background-color: #f3f3f3;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .announce-bar {
+      display: none; /* Убираем панель */
+    }
+
+    header {
+      display: none; /* Убираем панель */
+    }
+
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 0 0 10px 10px; /* Убираем закругления по верхним углам */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+    }
+
+    .container h1 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #333;
+      margin: 0;
+    }
+
+    .container p {
+      font-size: 18px;
+      color: #666;
+      margin: 20px 0;
+    }
+
+    .container button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #ccc;
+      border: none;
+      border-radius: 5px;
+      cursor: not-allowed;
+      font-weight: 600;
+      font-family: 'Segoe UI', 'Segoe UI Semibold', sans-serif;
+    }
+
+    .container button:hover {
+      background-color: #ccc; /* Оставляем серым даже при наведении */
+    }
+
+    #message {
+      margin-top: 20px;
+      color: #333;
+      font-size: 18px;
+    }
+
+    .announcement {
+      background-color: #1a91ff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px 5px 0 0; /* Убираем закругления по нижним углам */
+      position: absolute;
+      top: -40px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .github-section {
+      margin-top: 20px;
+    }
+
+    .github-link {
+      color: #1a91ff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .github-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-content">
+    <div class="container">
+      <div class="announcement">🎉 С новым годом!</div>
+      <h1>LunaOS</h1>
+      <p>Оптимизированная модификация Windows, предназначенная для энтузиастов и игроков.</p>
+      <button disabled>Скачать</button>
+      <div id="message">Проект еще не вышел для скачивания.</div>
+      <div class="github-section">
+        <a href="https://github.com/GoBobDev/LunaOS" class="github-link" target="_blank" rel="noreferrer noopener">Посетите наш GitHub</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
