@@ -1,0 +1,153 @@
+/* Общие стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Белый фон */
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+/* Заголовок */
+header {
+    background-color: #ffffff; /* Белый фон */
+    color: #333;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрирование содержимого */
+    margin: 0; /* Удаление дополнительного пространства */
+}
+
+header .container {
+    display: flex;
+    justify-content: center; /* Центрирование содержимого */
+    align-items: center;
+}
+
+/* Главный раздел */
+main {
+    padding: 0; /* Удаление дополнительного пространства */
+}
+
+#hero {
+    background-color: #0078d4;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 10px;
+    margin: 0; /* Удаление дополнительного пространства */
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+/* Секции */
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 2em;
+    color: #0078d4;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Опции скачивания */
+.download-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-options label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.download-options select {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px auto; /* Центрирование и удаление дополнительного пространства */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.file-type {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.file-type input[type="radio"] {
+    display: none;
+}
+
+.file-type label {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-type input[type="radio"]:checked + label {
+    background-color: #005a9e;
+}
+
+#versionSelectContainer {
+    display: block;
+}
+
+.download-options .btn {
+    background-color: #cccccc; /* Серый цвет для неактивной кнопки */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: not-allowed; /* Стиль курсора для неактивной кнопки */
+}
+
+.download-options .btn.disabled {
+    background-color: #cccccc; /* Серый цвет для неактивной кнопки */
+    cursor: not-allowed; /* Стиль курсора для неактивной кнопки */
+}
+
+/* Футер */
+footer {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e1e1e1;
+}
