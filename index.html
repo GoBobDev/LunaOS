@@ -10,13 +10,24 @@
         function toggleVersionSelect() {
             var fileType = document.querySelector('input[name="fileType"]:checked').value;
             var versionSelect = document.getElementById("versionSelectContainer");
+            var downloadButton = document.getElementById("downloadButton");
             
             if (fileType === "iso") {
                 versionSelect.style.display = "block";
+                downloadButton.classList.add("disabled");
+                downloadButton.disabled = true;
+                downloadButton.removeAttribute("href");
             } else {
                 versionSelect.style.display = "none";
+                downloadButton.classList.remove("disabled");
+                downloadButton.disabled = false;
+                downloadButton.setAttribute("href", "setup.exe");
             }
         }
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            toggleVersionSelect();
+        });
     </script>
 </head>
 <body>
@@ -29,8 +40,23 @@
     <main>
         <section id="hero">
             <div class="container">
-                <h1>Добро пожаловать в сборку LunaOS</h1>
-                <p>Современная сборка Windows для всех пользователей. Ожидайте выхода новостей и обновлений.</p>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>Добро пожаловать в сборку LunaOS</h1>
+                        <p>Современная сборка Windows для всех пользователей. Ожидайте выхода новостей и обновлений.</p>
+                    </div>
+                    <div class="hero-carousel">
+                        <div class="carousel">
+                            <img src="scr1.png" alt="Screenshot 1" id="carousel-image" class="carousel-image">
+                            <img src="scr2.png" alt="Screenshot 2" class="carousel-image hidden">
+                            <img src="scr3.png" alt="Screenshot 3" class="carousel-image hidden">
+                            <div class="carousel-buttons">
+                                <button class="carousel-button" onclick="prevImage()">&#10094;</button>
+                                <button class="carousel-button" onclick="nextImage()">&#10095;</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -47,10 +73,20 @@
                 <h2>Скачать LunaOS</h2>
                 <div class="download-options">
                     <div class="file-type">
-                        <input type="radio" id="installer" name="fileType" value="installer" checked>
+                        <input type="radio" id="iso" name="fileType" value="iso" onchange="toggleVersionSelect()">
+                        <label for="iso">ISO файл</label>
+                        <input type="radio" id="installer" name="fileType" value="installer" onchange="toggleVersionSelect()">
                         <label for="installer">Установщик</label>
                     </div>
-                    <button class="btn disabled" disabled>Скачать</button>
+                    <div id="versionSelectContainer">
+                        <label for="versionSelect">Выберите версию:</label>
+                        <select id="versionSelect" name="version">
+                            <option value="win11_iot_en">Windows 11 Enterprise LTSC IoT [Только EN. x64]</option>
+                            <option value="win11_ltsc">Windows 11 Enterprise LTSC [RU, EN. x64]</option>
+                            <option value="win10_ltsc_2021">Windows 10 Enterprise LTSC 2021 [RU, EN. x64]</option>
+                        </select>
+                    </div>
+                    <a id="downloadButton" class="btn disabled" disabled>Скачать</a>
                 </div>
             </div>
         </section>
@@ -61,5 +97,30 @@
             <p>&copy; 2024 LunaOS. Все права защищены.</p>
         </div>
     </footer>
+
+    <script>
+        var images = document.querySelectorAll(".carousel-image");
+        var currentImageIndex = 0;
+
+        function showImage(index) {
+            images.forEach((img, idx) => {
+                img.classList.toggle("hidden", idx !== index);
+            });
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            showImage(currentImageIndex);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            showImage(currentImageIndex);
+        });
+    </script>
 </body>
 </html>
