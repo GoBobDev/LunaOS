@@ -128,14 +128,14 @@ p {
 }
 
 .download-options .btn {
-    background-color: #cccccc; /* Серый цвет для неактивной кнопки */
+    background-color: #0078d4;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    cursor: not-allowed; /* Стиль курсора для неактивной кнопки */
+    
 }
 
 .download-options .btn.disabled {
