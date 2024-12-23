@@ -47,18 +47,8 @@
                 <h2>Скачать LunaOS</h2>
                 <div class="download-options">
                     <div class="file-type">
-                        <input type="radio" id="iso" name="fileType" value="iso" checked onchange="toggleVersionSelect()">
-                        <label for="iso">ISO файл</label>
-                        <input type="radio" id="installer" name="fileType" value="installer" onchange="toggleVersionSelect()">
+                        <input type="radio" id="installer" name="fileType" value="installer" checked>
                         <label for="installer">Установщик</label>
-                    </div>
-                    <div id="versionSelectContainer">
-                        <label for="versionSelect">Выберите версию:</label>
-                        <select id="versionSelect" name="version">
-                            <option value="win11_iot_en">Windows 11 Enterprise LTSC IoT [Только EN. x64]</option>
-                            <option value="win11_ltsc">Windows 11 Enterprise LTSC [RU, EN. x64]</option>
-                            <option value="win10_ltsc_2021">Windows 10 Enterprise LTSC 2021 [RU, EN. x64]</option>
-                        </select>
                     </div>
                     <button class="btn disabled" disabled>Скачать</button>
                 </div>
