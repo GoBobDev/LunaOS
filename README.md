@@ -1,4 +1,4 @@
-# <h1 align="center"><img width=60px src="https://i.ibb.co/5KpSCNv/win11.png"> LunaOS
+## <img width=40px src="https://i.ibb.co/5KpSCNv/win11.png"> LunaOS
 
 Добро пожаловать в **LunaOS** — модификацию, для оптимизации системы по максимуму для обеспечения высокой производительности, безопасности и удобства использования.
 
