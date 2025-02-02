@@ -1,8 +1,10 @@
-# LunaOS
-
-![image](https://github.com/user-attachments/assets/6e32faf5-9d3c-4870-af82-a2b3cb067fa8)
+# <h1 align="center"><img width=60px src="https://i.ibb.co/5KpSCNv/win11.png"> LunaOS
 
 Добро пожаловать в **LunaOS** — модификацию, для оптимизации системы по максимуму для обеспечения высокой производительности, безопасности и удобства использования.
+
+
+
+
 
 ## Основные характеристики
 
